@@ -1,0 +1,26 @@
+.form_input {
+  padding-bottom: 25px;
+  position: relative;
+  label {
+    color: #64748b;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  input {
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    border: 0.5px solid #e2e8f0;
+    color: #64748b;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.actions {
+  text-align: end;
+  .fill_btn {
+    min-width: 260px;
+  }
+}

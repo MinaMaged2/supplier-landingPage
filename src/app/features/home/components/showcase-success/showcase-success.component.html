@@ -1,0 +1,22 @@
+<div class="showcase_container">
+  <div class="container">
+    <div class="showcase">
+      <h2>Numbers that showcase our success</h2>
+
+      <div class="numbers">
+        @for (item of numbers; track $index) {
+        <div class="number-box">
+          <div>
+            <h6>
+              {{ item.number }}
+            </h6>
+            <span>
+              {{ item.title }}
+            </span>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

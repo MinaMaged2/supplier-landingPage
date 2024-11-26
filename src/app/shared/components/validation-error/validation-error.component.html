@@ -1,0 +1,63 @@
+@if (formControl?.touched || formControl?.dirty) {
+<div class="input_error">
+  @if (formControl?.errors?.['required']) {
+  <small>
+    {{ "FIELD_REQUIRED" }}
+  </small>
+  } @if (formControl?.errors?.['minlength']) {
+  <small>
+    <!-- This field should be at least {{minLength}} characters -->
+    FIELD_SHOULD_BE_AT_LEAST_CHAR
+  </small>
+  }
+
+  <!-- This field should be at most {{maxLength}} characters -->
+  @if (formControl?.errors?.['maxlength']) {
+  <small> FIELD_SHOULD_BE_AT_MOST_CHAR </small>
+  } @if (formControl?.errors?.['min']) {
+  <small>
+    <!-- This field should be at least {{minValue}} value -->
+    FIELD_SHOULD_BE_AT_LEAST_VALUE
+  </small>
+  } @if (formControl?.errors?.['max']) {
+  <small>
+    <!-- This field should be at most {{maxValue}} value -->
+    FIELD_SHOULD_BE_AT_MOST_VALUE
+  </small>
+  } @if (formControl?.errors?.['pattern']) {
+  <small>
+    <!-- Enter valid field -->
+    {{ "ENTER_VALID_DATA" }}
+  </small>
+  } @if (formControl?.get('email')?.touched &&
+  formControl?.get('email')?.errors) {
+  <small>
+    @if (formControl?.get('email')?.getError('pattern')) {
+    <ng-container>
+      <!-- This field require a valid email -->
+      {{ "FIELD_EMAIL_REQUIRED" }}
+    </ng-container>
+    }
+  </small>
+  } @if (formControl?.errors?.['phoneNumber']) {
+  <small>
+    <!-- This field require valid phone number -->
+    {{ "FIELD_PHONE_REQUIRED" }}
+  </small>
+  } @if (formControl?.errors?.['arabic']) {
+  <small>
+    <!-- Arabic text is not allowed in this field -->
+    {{ "FIELD_ARABIC_REQUIRED" }}
+  </small>
+  } @if (formControl?.errors?.['english']) {
+  <small>
+    <!-- English text is not allowed in this field -->
+    {{ "FIELD_ENGLISH_REQUIRED" }}
+  </small>
+  } @if (formControl?.errors?.['containsSpecialCharacter']) {
+  <small> Special characters are not allowed in this field </small>
+  } @if (formControl?.errors?.['dateRange']) {
+  <small> From date must be before To date </small>
+  }
+</div>
+}

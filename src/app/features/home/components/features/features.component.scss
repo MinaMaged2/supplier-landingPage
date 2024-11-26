@@ -1,0 +1,106 @@
+.features_container {
+  padding: 54px 0;
+
+  .features {
+    .feature_label {
+      margin-bottom: 24px;
+      span {
+        color: #f63a61;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-radius: 60px;
+        background: rgba(246, 58, 97, 0.1);
+        padding: 5px 15px;
+      }
+    }
+
+    .section_header {
+      h2 {
+        color: #131316;
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 52px;
+        margin: 0 0 24px 0;
+      }
+
+      p {
+        color: #64748b;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 24px;
+        max-width: 38%;
+      }
+
+      .fill_btn {
+        min-width: 190px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .services {
+      padding: 32px 0;
+
+      .service {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding-inline-end: 45px;
+        .service_icon {
+          div {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+          }
+        }
+
+        h5 {
+          color: #334155;
+          font-weight: 700;
+          line-height: 150%;
+          font-size: 18px;
+          margin: 0;
+        }
+
+        p {
+          color: #64748b;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 150%;
+        }
+
+        .blue {
+          background-color: #93e7fe;
+          svg path {
+            stroke: #005870;
+          }
+        }
+
+        .yellow {
+          background-color: #ffd978;
+          svg path {
+            stroke: #7c5900;
+          }
+        }
+
+        .orange {
+          background-color: #ffa666;
+          svg path {
+            stroke: #9b4100;
+          }
+        }
+
+        .pink {
+          background-color: #faa9e4;
+          svg path {
+            stroke: #96006d;
+          }
+        }
+      }
+    }
+  }
+}

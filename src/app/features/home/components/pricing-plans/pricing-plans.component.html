@@ -1,0 +1,30 @@
+<div class="plans_container">
+  <div class="container">
+    <div class="plans">
+      <div class="section_header">
+        <h2>Pricing Plans</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
+          phasellus mollis sit aliquam sit nullam.
+        </p>
+      </div>
+
+      <div class="table_data">
+        <app-prices-table
+          [tablesRow]="audienceRow"
+          [data]="audience"
+          [showHeader]="true"
+        ></app-prices-table>
+
+        <div class="second_table">
+          <app-prices-table
+            [tablesRow]="automationRow"
+            [data]="automation"
+            [showHeader]="false"
+            [showFooter]="true"
+          ></app-prices-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

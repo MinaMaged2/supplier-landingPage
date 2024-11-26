@@ -1,0 +1,105 @@
+.sol_container {
+  padding: 57px 0;
+
+  .sol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    .seaction_header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+      h2 {
+        margin: 0;
+        color: #131316;
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 52px;
+      }
+
+      p {
+        margin: 0;
+        color: #64748b;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        max-width: 60%;
+      }
+    }
+
+    .solution {
+      display: flex;
+      align-items: center;
+      gap: 54px;
+      padding: 32px 54px 32px 0;
+      border: 1px solid #eff6ff;
+      box-shadow: 0px 1px 4px 0px #19213d14;
+      border-radius: 16px;
+      .img {
+        width: 60%;
+        img {
+          width: 100%;
+          max-height: 400px;
+          border-radius: 0 16px 16px 0;
+        }
+      }
+
+      .section_data {
+        width: 40%;
+      }
+    }
+
+    .sub_solution {
+      display: flex;
+      gap: 22px;
+
+      .solution_option {
+        display: flex;
+        width: 60%;
+        padding-top: 32px;
+        border-radius: 16px;
+        border: 1px solid #EFF6FF;
+        box-shadow: 0px 1px 4px 0px #19213D14;
+
+        .sub_solution_img {
+          width: 40%;
+          img {
+            width: 100%;
+            max-height: 290px;
+          }
+        }
+
+        .sub_solution_info {
+          width: 60%;
+          padding: 0px 32px 54px 32px;
+
+          ::ng-deep{
+            p{
+                max-width: 90%;
+            }
+          }
+        }
+      }
+
+      .sub_solution_info_single {
+        width: 40%;
+        padding: 32px 36px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        border: 1px solid #EFF6FF;
+        box-shadow: 0px 1px 4px 0px #19213D14;
+        border-radius: 16px;
+
+        ::ng-deep{
+            p{
+                max-width: 85%;
+            }
+          }
+      }
+    }
+  }
+}

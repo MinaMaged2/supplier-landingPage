@@ -1,0 +1,113 @@
+@import "../../../../../src//assets/styles/base/variables";
+
+.prices {
+  th {
+    background-color: transparent;
+    border: none;
+    .row-container {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      .price {
+        color: #0f0f0f;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 47px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        justify-content: center;
+        span {
+          color: #94a3b8;
+          font-size: 12px;
+          line-height: 16px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.main_header {
+  th {
+    background-color: #f1f5f9;
+    padding: 22px 14px;
+    color: #475569;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    border-block: 1px solid #e1e4ed;
+    &:first-of-type {
+      border-radius: 8px 0 0 0;
+      border-inline-start: 1px solid #e1e4ed;
+    }
+    &:last-of-type {
+      border-radius: 0 8px 0 0;
+      border-inline-end: 1px solid #e1e4ed;
+    }
+    &:not(:first-of-type) {
+      text-align: center;
+    }
+  }
+}
+
+::ng-deep {
+  .p-datatable-tbody {
+    td {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 22px 14px;
+      &:first-of-type {
+        color: #475569;
+        font-weight: 700;
+        border-inline-start: 1px solid #e1e4ed;
+      }
+      &:last-of-type {
+        border-inline-end: 1px solid #e1e4ed;
+      }
+      &:not(:first-of-type) {
+        text-align: center;
+        color: #64748b;
+        font-weight: 500;
+        border-bottom: 1px solid #e1e4ed;
+      }
+    }
+  }
+}
+
+.table_btn {
+  background-color: transparent;
+  color: #475569;
+  border-radius: 24px;
+  padding: 8px 16px;
+  border: 1px solid #475569;
+  flex-direction: row-reverse;
+  gap: 4px;
+  transition: all 0.3s ease-in-out;
+  svg path {
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    color: #fff;
+
+    svg path {
+      stroke: #fff;
+    }
+  }
+}
+::ng-deep {
+  .p-datatable-tfoot {
+    td {
+        text-align: center;
+      background-color: transparent;
+      border: none;
+      padding-top: 32px;
+      padding-bottom: 0;
+    }
+  }
+}
