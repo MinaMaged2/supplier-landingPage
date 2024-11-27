@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { PricesTableComponent } from '../../../../shared/components/prices-table/prices-table.component';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-pricing-plans',
   standalone: true,
-  imports: [PricesTableComponent],
+  imports: [PricesTableComponent, ButtonModule],
   templateUrl: './pricing-plans.component.html',
   styleUrl: './pricing-plans.component.scss'
 })

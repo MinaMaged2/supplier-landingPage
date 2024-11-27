@@ -38,8 +38,16 @@
       border: 1px solid #eff6ff;
       box-shadow: 0px 1px 4px 0px #19213d14;
       border-radius: 16px;
+
+      @media (max-width: 767.98px) {
+        flex-direction: column;
+        padding: 32px 10px;
+      }
       .img {
         width: 60%;
+        @media (max-width: 767.98px) {
+          width: 100%;
+        }
         img {
           width: 100%;
           max-height: 400px;
@@ -49,13 +57,18 @@
 
       .section_data {
         width: 40%;
+        @media (max-width: 767.98px) {
+          width: 100%;
+        }
       }
     }
 
     .sub_solution {
       display: flex;
       gap: 22px;
-
+      @media (max-width: 767.98px) {
+        flex-direction: column;
+      }
       .solution_option {
         display: flex;
         width: 60%;
@@ -63,19 +76,30 @@
         border-radius: 16px;
         border: 1px solid #EFF6FF;
         box-shadow: 0px 1px 4px 0px #19213D14;
-
+        @media (max-width: 767.98px) {
+          width: 100%;
+          flex-direction: column;
+        }
         .sub_solution_img {
           width: 40%;
           img {
             width: 100%;
             max-height: 290px;
+            @media (max-width: 767.98px) {
+              border-radius: 0 0 16px 16px;
+            }
+          }
+          @media (max-width: 767.98px) {
+            width: 100%;
           }
         }
 
         .sub_solution_info {
           width: 60%;
           padding: 0px 32px 54px 32px;
-
+          @media (max-width: 767.98px) {
+            width: 100%;
+          }
           ::ng-deep{
             p{
                 max-width: 90%;
@@ -93,7 +117,9 @@
         border: 1px solid #EFF6FF;
         box-shadow: 0px 1px 4px 0px #19213D14;
         border-radius: 16px;
-
+        @media (max-width: 767.98px) {
+          width: 100%;
+        }
         ::ng-deep{
             p{
                 max-width: 85%;

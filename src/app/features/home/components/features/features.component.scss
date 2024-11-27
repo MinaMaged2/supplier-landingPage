@@ -31,6 +31,10 @@
         line-height: 24px;
         margin-bottom: 24px;
         max-width: 38%;
+        @media (max-width: 575.98px) {
+          max-width: 90%;
+        }
+
       }
 
       .fill_btn {
@@ -41,7 +45,12 @@
 
     .services {
       padding: 32px 0;
-
+      & > div{
+        row-gap: 140px;
+        @media (max-width: 575.98px) {
+          row-gap: 60px;
+        }
+      }
       .service {
         display: flex;
         flex-direction: column;

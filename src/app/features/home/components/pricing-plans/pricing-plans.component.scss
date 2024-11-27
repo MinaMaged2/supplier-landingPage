@@ -29,6 +29,7 @@
   }
 
   .second_table {
+    margin-bottom: 54px;
     ::ng-deep {
       .main_header {
         th {
@@ -54,6 +55,38 @@
               &:last-of-type {
                 border-radius: 0 0 8px 0;
               }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .table_details {
+    .hide_plan {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      p {
+        margin: 0;
+        color: #0f0f0f;
+        font-weight: 900;
+        line-height: 26px;
+        font-size: 20px;
+      }
+
+      .actions{
+        .fill_btn{
+          flex-direction: row-reverse;
+          background-color: #F3F6FF;
+          gap: 8px;
+
+          ::ng-deep{
+            span{
+              font-size: 12px;
+              color: #1D4ED8;
+              line-height: 18px;
             }
           }
         }

@@ -19,6 +19,10 @@
       box-shadow: 0px 1px 4px 0px rgba(25, 33, 61, 0.08);
       display: flex;
       justify-content: space-between;
+      @media (max-width: 767.98px) {
+        flex-direction: column;
+        gap: 20px;
+      }
       .number-box {
         flex-grow: 1;
         display: flex;
@@ -32,12 +36,18 @@
         }
         &:first-of-type {
           align-items: flex-start;
+          @media (max-width: 767.98px) {
+            align-items: center;
+          }
         }
         &:not(:last-of-type, :first-of-type) {
           flex-grow: 2;
         }
         &:last-of-type {
           align-items: flex-end;
+          @media (max-width: 767.98px) {
+            align-items: center;
+          }
         }
         &:not(:last-of-type) {
           &::before {
@@ -49,6 +59,9 @@
             right: 0;
             top: 50%;
             transform: translateY(-50%);
+            @media (max-width: 767.98px) {
+              content: none;
+            }
           }
         }
 

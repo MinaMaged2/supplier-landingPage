@@ -45,41 +45,52 @@
       </div>
     </div>
 
-    <div>
-      <button pButton pRipple icon="pi pi-bars" class="p-button-success" (click)="sidebarVisible = true"></button>
-    </div>
-  </div>
-
-  <p-sidebar [(visible)]="sidebarVisible">
-    <ul class="show_mobile">
-      @for (item of navItems; track $index) {
-      <li itemprop="name" [routerLinkActive]="'active'">
-        <a itemprop="url" [routerLink]="item.url">{{ item.name }}</a>
-      </li>
-      }
-    </ul>
-
-    <div class="navbar_end hide_mobile">
-      <div class="contact_us">
-        <a href="#">Contact Us</a>
-      </div>
-
-      <div class="icon">
+    <div class="show_mobile">
+      <button
+        pButton
+        pRipple
+        class="mobile_nav_menu"
+        (click)="sidebarVisible = true"
+      >
         <svg
           width="24"
-          height="23"
-          viewBox="0 0 24 23"
+          height="24"
+          viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path
-            d="M23.0001 1.14648L8.5676 1.56354C8.5676 1.56354 -2.96668 1.66155 3.22724 3.51686C8.06567 4.96615 17.8772 7.14649 17.8772 7.14649C17.8772 7.14649 24.9854 8.43615 22.3397 9.41867C18.9218 10.688 5.09643 9.7009 1.9173 11.5374C-0.109548 12.7083 13.9915 12.8962 13.9915 16.8604C13.9915 19.0309 13.9915 21.098 13.9915 21.098"
-            stroke="#1E1E1E"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
+          <g id="vuesax/linear/menu">
+            <g id="menu">
+              <path
+                id="Vector"
+                d="M3 7H21"
+                stroke="#292D32"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                id="Vector_2"
+                d="M3 12H21"
+                stroke="#292D32"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                id="Vector_3"
+                d="M3 17H21"
+                stroke="#292D32"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </g>
+          </g>
         </svg>
-      </div>
+      </button>
     </div>
-  </p-sidebar>
+  </div>
+
+  <app-mobile-navbar
+    [sidebarVisible]="sidebarVisible"
+    (hideSideBar)="sidebarVisible = false"
+  ></app-mobile-navbar>
 </nav>

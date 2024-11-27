@@ -1,5 +1,21 @@
-@use 'sass:map';
-@import 'bootstrap/scss/functions';
-@import 'bootstrap/scss/variables';
-@import 'bootstrap/scss/mixins';
-@import 'functions';
+@use "sass:map";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "functions";
+
+@mixin rtl($property, $ltr-value, $rtl-value: null) {
+  html[dir="ltr"] & {
+    #{$property}: $ltr-value;
+  }
+  html[dir="rtl"] & {
+    #{$property}: #{if($rtl-value != null, $rtl-value, $ltr-value)};
+  }
+}
+
+// @mixin ltr($property, $ltr-value, $rtl-value: null) {
+//   #{$property}: $ltr-value;
+//   html[dir="ltr"] & {
+//     #{$property}: #{if($rtl-value != null, $rtl-value, $ltr-value)};
+//   }
+// }

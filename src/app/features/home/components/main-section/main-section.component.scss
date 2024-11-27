@@ -1,4 +1,5 @@
 @import "../../../../../assets/styles/base/variables";
+@import "../../../../../assets/styles/abstracts/mixins";
 
 .main_section_container {
   padding: 54px 0;
@@ -11,49 +12,60 @@
     flex-direction: column;
     justify-content: center;
 
-    ::ng-deep{
-        .p-tabview{
-            .p-tabview-nav{
-                background: transparent;
-                border: 1px solid transparent;
+    ::ng-deep {
+      .p-tabview {
+        .p-tabview-nav {
+          background: transparent;
+          border: 1px solid transparent;
 
-                .p-tabview-nav-link{
-                    padding: 8px 16px;
-                    color: #94A3B8;
-                    font-size: 16px;
-                    font-weight: 400;
-                    line-height: 20px;
-                    border-color: transparent;
-                    background: transparent;
-                }
+          .p-tabview-nav-link {
+            padding: 8px 16px;
+            color: #94a3b8;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            border-color: transparent;
+            background: transparent;
+          }
 
-                .p-highlight{
-                    .p-tabview-nav-link{
-                        color: $primary-color;
-                        border-color: $primary-color;
-                        span{
-                            font-weight: 600;
-                        }
-                    }
-                }
+          .p-highlight {
+            .p-tabview-nav-link {
+              color: $primary-color;
+              border-color: $primary-color;
+              span {
+                font-weight: 600;
+              }
             }
-
-            .p-tabview-panels{
-                padding: 24px 0 0 0;
-                background-color: transparent;
-            }
+          }
         }
-    }    
+
+        .p-tabview-panels {
+          padding: 24px 0 0 0;
+          background-color: transparent;
+        }
+      }
+    }
   }
 
   .img {
     min-height: 500px;
-    img{
-        max-width: 720px;
-        position: absolute;
-        right: 0;
-        max-height: 500px;
-        border-radius: 16px 0 0 16px;
+    @media (max-width: 1199.98px) {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      max-width: 720px;
+      position: absolute;
+      max-height: 500px;
+      border-radius: 16px 0 0 16px;
+      @include rtl(right, 0px, auto);
+      @include rtl(left, auto , 0px);
+
+      @media (max-width: 1199.98px) {
+        position: relative;
+        max-width: 100%;
+      }
     }
   }
 }

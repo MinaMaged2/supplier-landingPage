@@ -1,0 +1,32 @@
+<p-sidebar [(visible)]="sidebarVisible" (onHide)="hideSideBar.emit()">
+    <ul class="show_mobile">
+      @for (item of navItems; track $index) {
+      <li itemprop="name" [routerLinkActive]="'active'">
+        <a itemprop="url" [routerLink]="item.url">{{ item.name }}</a>
+      </li>
+      }
+    </ul>
+
+    <div class="navbar_end">
+      <div class="contact_us">
+        <a href="#">Contact Us</a>
+      </div>
+
+      <div class="icon">
+        <svg
+          width="24"
+          height="23"
+          viewBox="0 0 24 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M23.0001 1.14648L8.5676 1.56354C8.5676 1.56354 -2.96668 1.66155 3.22724 3.51686C8.06567 4.96615 17.8772 7.14649 17.8772 7.14649C17.8772 7.14649 24.9854 8.43615 22.3397 9.41867C18.9218 10.688 5.09643 9.7009 1.9173 11.5374C-0.109548 12.7083 13.9915 12.8962 13.9915 16.8604C13.9915 19.0309 13.9915 21.098 13.9915 21.098"
+            stroke="#1E1E1E"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+    </div>
+  </p-sidebar>

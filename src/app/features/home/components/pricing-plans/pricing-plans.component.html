@@ -25,6 +25,45 @@
           ></app-prices-table>
         </div>
       </div>
+
+      <div class="table_details">
+        <div class="hide_plan">
+          <p>Details Plans</p>
+
+          <div class="actions">
+            <button pButton pRipple label="Hide" class="fill_btn">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.6851 9.00006C11.6851 10.4851 10.4851 11.6851 9.00006 11.6851C7.51506 11.6851 6.31506 10.4851 6.31506 9.00006C6.31506 7.51506 7.51506 6.31506 9.00006 6.31506C10.4851 6.31506 11.6851 7.51506 11.6851 9.00006Z"
+                  stroke="#1D4ED8"
+                  stroke-width="1.35"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.00001 15.2025C11.6475 15.2025 14.115 13.6425 15.8325 10.9425C16.5075 9.88504 16.5075 8.10754 15.8325 7.05004C14.115 4.35004 11.6475 2.79004 9.00001 2.79004C6.35251 2.79004 3.885 4.35004 2.1675 7.05004C1.4925 8.10754 1.4925 9.88504 2.1675 10.9425C3.885 13.6425 6.35251 15.2025 9.00001 15.2025Z"
+                  stroke="#1D4ED8"
+                  stroke-width="1.35"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <app-prices-table
+          [tablesRow]="automationRow"
+          [data]="automation"
+          [showHeader]="false"
+          [showFooter]="false"
+        ></app-prices-table>
+      </div>
     </div>
   </div>
 </div>
