@@ -5,10 +5,10 @@
 @import "functions";
 
 @mixin rtl($property, $ltr-value, $rtl-value: null) {
-  html[dir="ltr"] & {
+  [dir="ltr"] & {
     #{$property}: $ltr-value;
   }
-  html[dir="rtl"] & {
+  [dir="rtl"] & {
     #{$property}: #{if($rtl-value != null, $rtl-value, $ltr-value)};
   }
 }

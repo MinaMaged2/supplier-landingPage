@@ -1,7 +1,7 @@
 <div class="showcase_container">
   <div class="container">
     <div class="showcase">
-      <h2>Numbers that showcase our success</h2>
+      <h2>{{'NumbersOfShowcase' | translate }}</h2>
 
       <div class="numbers">
         @for (item of numbers; track $index) {
@@ -11,7 +11,7 @@
               {{ item.number }}
             </h6>
             <span>
-              {{ item.title }}
+              {{ item.title | translate}}
             </span>
           </div>
         </div>

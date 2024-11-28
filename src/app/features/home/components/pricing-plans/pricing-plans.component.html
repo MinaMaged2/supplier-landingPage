@@ -2,36 +2,39 @@
   <div class="container">
     <div class="plans">
       <div class="section_header">
-        <h2>Pricing Plans</h2>
+        <h2>{{'PricingPlans' | translate}}</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
-          phasellus mollis sit aliquam sit nullam.
+          {{'PricingPlansDesc' | translate}}
         </p>
       </div>
 
       <div class="table_data">
         <app-prices-table
-          [tablesRow]="audienceRow"
-          [data]="audience"
-          [showHeader]="true"
+          [tablesRow]="mainRowHeader"
+          [data]="mainPlans"
+          [showHeader]="false"
+          [showFooter]="true"
+          [showViewMore]="true"
+          (isShowMoreClicked)="isShowDetails = true"
         ></app-prices-table>
 
-        <div class="second_table">
+        <!-- <div class="second_table">
           <app-prices-table
             [tablesRow]="automationRow"
             [data]="automation"
             [showHeader]="false"
             [showFooter]="true"
           ></app-prices-table>
-        </div>
+        </div> -->
       </div>
 
+     @if (isShowDetails) {
       <div class="table_details">
         <div class="hide_plan">
-          <p>Details Plans</p>
+          <p>{{'DetailsPlans' | translate}}</p>
 
           <div class="actions">
-            <button pButton pRipple label="Hide" class="fill_btn">
+            <button pButton pRipple [label]="'Hide' | translate" (click)="isShowDetails = false" class="fill_btn">
               <svg
                 width="18"
                 height="18"
@@ -58,12 +61,13 @@
           </div>
         </div>
         <app-prices-table
-          [tablesRow]="automationRow"
-          [data]="automation"
+          [tablesRow]="descriptionRow"
+          [data]="descriptionData"
           [showHeader]="false"
           [showFooter]="false"
         ></app-prices-table>
       </div>
+     }
     </div>
   </div>
 </div>

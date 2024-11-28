@@ -1,29 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-showcase-success',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './showcase-success.component.html',
-  styleUrl: './showcase-success.component.scss'
+  styleUrl: './showcase-success.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class ShowcaseSuccessComponent {
   numbers: any[] = [
     {
       number: '200+',
-      title: 'Websites build'
+      title: 'WebsitesBuild'
     },
     {
       number: '97%',
-      title: 'Client satisfaction'
+      title: 'ClientSatisfaction'
     },
     {
       number: '34+',
-      title: 'Team members'
+      title: 'TeamMembers'
     },
     {
       number: '100+',
-      title: 'Amazing clients'
+      title: 'AmazingClients'
     }
   ]
 }

@@ -1,3 +1,5 @@
+@import "../../../../../assets/styles/abstracts/mixins";
+
 .contact_container {
   padding: 54px 0;
   background-image: url(/assets/imgs/contact.png);
@@ -43,8 +45,11 @@
           width: 1px;
           background-color: #b6b6b7;
           position: absolute;
-          right: -20px;
           height: 100%;
+
+          @include rtl(right, -20px, auto);
+          @include rtl(left, auto, -20px);
+
           @media (max-width: 767.98px) {
             content: none;
           }
@@ -66,7 +71,7 @@
             display: flex;
             gap: 15px;
             span {
-              min-width: 60px;
+              min-width: 80px;
             }
           }
         }

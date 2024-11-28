@@ -1,3 +1,5 @@
+@import "../../../../../assets/styles/abstracts/mixins";
+
 .showcase_container {
   padding: 54px 0;
 
@@ -56,9 +58,10 @@
             height: 60%;
             background-color: #b6b6b7;
             position: absolute;
-            right: 0;
             top: 50%;
             transform: translateY(-50%);
+            @include rtl(right, 0px, auto);
+            @include rtl(left, auto, 0px);
             @media (max-width: 767.98px) {
               content: none;
             }

@@ -1,86 +1,136 @@
 import { Component } from '@angular/core';
 import { PricesTableComponent } from '../../../../shared/components/prices-table/prices-table.component';
 import { ButtonModule } from 'primeng/button';
+import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-pricing-plans',
   standalone: true,
-  imports: [PricesTableComponent, ButtonModule],
+  imports: [PricesTableComponent, ButtonModule, TranslateModule],
   templateUrl: './pricing-plans.component.html',
-  styleUrl: './pricing-plans.component.scss'
+  styleUrl: './pricing-plans.component.scss',
+  providers: [TranslatePipe]
 })
 export class PricingPlansComponent {
-  audienceRow: string[] = [
-    'Audience',
-    'Basic plan',
-    'Pro plan',
-    'Premium plan',
-    'Customize plan'
+  mainRowHeader:   string[] = [
+    '',
+    'BasicPlan',
+    'ProPlan',
+    'PremiumPlan',
+    'CustomizePlan'
   ];
 
-  audience: any[] = [
+  mainPlans: any[] = [
     {
       marked: false,
-      name: 'Manage subscribers',
-      basicPlan: 'Up to 1,000',
-      proPlan: '2,500',
-      premiumPlan: 'Unlimited',
-      customizePlan: 'Unlimited'
+      name: 'Stores',
+      basicPlan: '1',
+      proPlan: '3',
+      premiumPlan: '5',
+      customizePlan: this.translate.transform('Unlimited')
     },
     {
       marked: false,
-      name: 'Create email forms',
-      basicPlan: 'Up to 1,000',
-      proPlan: '2,500',
-      premiumPlan: 'Unlimited',
-      customizePlan: 'Unlimited'
+      name: 'Users',
+      basicPlan: '2',
+      proPlan: '4',
+      premiumPlan: '6',
+      customizePlan: this.translate.transform('Unlimited')
+    },
+    {
+      marked: false,
+      name: 'Products',
+      basicPlan: '1000',
+      proPlan: '2000',
+      premiumPlan: '3000',
+      customizePlan: this.translate.transform('Unlimited')
     },
     {
       marked: true,
-      name: 'Customizable domain',
-      basicPlan: true,
-      proPlan: true,
-      premiumPlan: true,
-      customizePlan: true
-    },
-    {
-      marked: true,
-      name: 'Subscribers tagging',
-      basicPlan: true,
-      proPlan: true,
-      premiumPlan: true,
-      customizePlan: true
-    },
-    {
-      marked: true,
-      name: 'Newsletter referral system',
+      name: 'OnlineStore',
       basicPlan: false,
-      proPlan: false,
+      proPlan: true,
+      premiumPlan: true,
+      customizePlan: true
+    },
+    {
+      marked: true,
+      name: 'UnLimitedInvoices',
+      basicPlan: true,
+      proPlan: true,
+      premiumPlan: true,
+      customizePlan: true
+    },
+    {
+      marked: true,
+      name: 'UnLimitedReports',
+      basicPlan: true,
+      proPlan: true,
+      premiumPlan: true,
+      customizePlan: true
+    },
+    {
+      marked: true,
+      name: 'CustomerService24h',
+      basicPlan: true,
+      proPlan: true,
       premiumPlan: true,
       customizePlan: true
     }
   ];
 
-  automationRow: string[] = [
-    'Automation & emails',
-    'Basic plan',
-    'Pro plan',
-    'Premium plan',
-    'Premium plan',
+  descriptionRow: string[] = [
+    '',
+    'BasicPlan',
+    'ProPlan',
+    'PremiumPlan',
+    'CustomizePlan'
   ];
 
-  automation: any[] = [
+  descriptionData: any[] = [
     {
       marked: false,
-      name: 'Send email broadcast',
-      basicPlan: '250/mo',
-      proPlan: '500/mo',
-      premiumPlan: 'Unlimited',
-      customizePlan: 'Unlimited'
+      name: 'Products',
+      basicPlan: '1000',
+      proPlan: '2000',
+      premiumPlan: '3000',
+      customizePlan: this.translate.transform('Unlimited')
+    },
+    {
+      marked: false,
+      name: 'Users',
+      basicPlan: '2',
+      proPlan: '4',
+      premiumPlan: '6',
+      customizePlan: this.translate.transform('Unlimited')
+    },
+    {
+      marked: false,
+      name: 'Stores',
+      basicPlan: '1',
+      proPlan: '3',
+      premiumPlan: '5',
+      customizePlan: this.translate.transform('Unlimited')
     },
     {
       marked: true,
-      name: '100+ integrations',
+      name: 'UnLimitedInvoices',
+      basicPlan: true,
+      proPlan: true,
+      premiumPlan: true,
+      customizePlan: true
+    },
+    {
+      marked: true,
+      name: 'UnLimitedClients',
+      basicPlan: true,
+      proPlan: true,
+      premiumPlan: true,
+      customizePlan: true
+    },
+    {
+      marked: true,
+      name: 'webSite',
       basicPlan: false,
       proPlan: true,
       premiumPlan: true,
@@ -88,7 +138,7 @@ export class PricingPlansComponent {
     },
     {
       marked: true,
-      name: 'Automated email sequences',
+      name: 'OnlineOrders',
       basicPlan: false,
       proPlan: true,
       premiumPlan: true,
@@ -96,19 +146,33 @@ export class PricingPlansComponent {
     },
     {
       marked: true,
-      name: 'Automated funnels',
+      name: 'DeleveryApp',
       basicPlan: false,
       proPlan: false,
       premiumPlan: true,
       customizePlan: true
     },
     {
-      marked: true,
-      name: 'Customizable emails',
-      basicPlan: false,
-      proPlan: false,
-      premiumPlan: true,
-      customizePlan: true
+      marked: false,
+      name: 'Prices',
+      basicPlan: '180',
+      proPlan: '310',
+      premiumPlan: '390',
+      customizePlan: 'Monthly'
     },
-  ]
+    {
+      marked: false,
+      name: 'Prices',
+      basicPlan: '1900',
+      proPlan: '3200',
+      premiumPlan: '3950',
+      customizePlan: 'Yearly'
+    },
+  ];
+  isShowDetails: boolean = false;
+
+  constructor(
+    private translate: TranslatePipe
+  ){}
+
 }

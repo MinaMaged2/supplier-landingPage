@@ -1,3 +1,5 @@
+@import "../../../../../../assets/styles/abstracts/mixins";
+
 .header_container {
   display: flex;
   background-color: #000;
@@ -15,6 +17,8 @@
   .contact_info_background {
     background-color: #1d4ed8;
     clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
+
+    @include rtl('clip-path', polygon(0 0, 100% 0%, 92% 100%, 0% 100%), polygon(50% 0%, 100% 0, 100% 100%, 7% 100%, 0 0));
     @media (max-width: 767.98px) {
       position: absolute;
       top: 0;
@@ -28,7 +32,9 @@
 
   .social_info_background {
     background-color: #080809;
-    left: 50%;
+
+    @include rtl(right, auto, 50%);
+    @include rtl(left, 50%, auto);
   }
 
   .container-sm {

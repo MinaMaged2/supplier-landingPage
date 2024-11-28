@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-validation-error',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './validation-error.component.html',
   styleUrl: './validation-error.component.scss'
 })

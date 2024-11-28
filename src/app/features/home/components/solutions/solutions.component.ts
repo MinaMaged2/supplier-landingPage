@@ -1,17 +1,31 @@
 import { Component } from '@angular/core';
 import { InfoBoxComponent } from '../info-box/info-box.component';
 import { title } from 'process';
+import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-solutions',
   standalone: true,
-  imports: [InfoBoxComponent],
+  imports: [InfoBoxComponent, TranslateModule],
   templateUrl: './solutions.component.html',
-  styleUrl: './solutions.component.scss'
+  styleUrl: './solutions.component.scss',
+  providers: [TranslatePipe]
 })
 export class SolutionsComponent {
-  boxInfoData: any = {
-    header: 'Realtime analytics',
-    desc: 'Ornare arcu dui vivamus arcu felis bibendum ut tristique et tortor condimentum lacinia quis vel eros laoreet id donec ultrices tincidunt arcu id donec ultrices tincidunt arcu ipsum dolor sit amet.'
+  boxInfoDataOne: any = {
+    header: this.translate.transform('TalgahaCasher'),
+    desc: this.translate.transform('CasherDesc')
   }
+  boxInfoDataTwo: any = {
+    header: this.translate.transform('TalgahaWebSite'),
+    desc: this.translate.transform('TalgahaWebSiteDesc')
+  }
+  boxInfoDataThree: any = {
+    header: this.translate.transform('jumlaConnect'),
+    desc: this.translate.transform('jumlaConnectDesc')
+  };
+
+  constructor(
+    private translate: TranslatePipe
+  ){}
 }

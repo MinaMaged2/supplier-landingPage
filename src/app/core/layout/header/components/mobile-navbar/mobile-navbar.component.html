@@ -1,15 +1,15 @@
 <p-sidebar [(visible)]="sidebarVisible" (onHide)="hideSideBar.emit()">
     <ul class="show_mobile">
       @for (item of navItems; track $index) {
-      <li itemprop="name" [routerLinkActive]="'active'">
-        <a itemprop="url" [routerLink]="item.url">{{ item.name }}</a>
+      <li itemprop="name">
+        <a itemprop="url" routerLink="/"  [fragment]="item.url">{{ item.name | translate }}</a>
       </li>
       }
     </ul>
 
     <div class="navbar_end">
       <div class="contact_us">
-        <a href="#">Contact Us</a>
+        <a routerLink="/" fragment="contact" >{{'ContactUs' | translate}}</a>
       </div>
 
       <div class="icon">

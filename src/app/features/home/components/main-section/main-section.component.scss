@@ -61,7 +61,7 @@
       border-radius: 16px 0 0 16px;
       @include rtl(right, 0px, auto);
       @include rtl(left, auto , 0px);
-
+      @include rtl('border-radius', 16px 0 0 16px, 0 16px 16px 0);
       @media (max-width: 1199.98px) {
         position: relative;
         max-width: 100%;

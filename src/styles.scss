@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "assets/styles/main.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fff;
 
@@ -45,5 +49,17 @@ body {
     @media (max-width: 991.98px) {
       display: none !important;
     }
+  }
+
+}
+
+html[dir="rtl"] {
+  .change_dir {
+    transform: rotate(180deg);
+  }
+
+  .p-float-label > label{
+    left: auto;
+    right: 0.75rem;
   }
 }

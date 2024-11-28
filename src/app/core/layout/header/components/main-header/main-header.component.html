@@ -8,14 +8,16 @@
     <div class="navbar_start">
       <!-- Logo Section -->
       <div class="navbar-logo">
-        <img src="assets/imgs/logo.jpg" alt="Logo" class="logo" />
+        <a href="#">
+          <img src="assets/imgs/logo.jpg" alt="Logo" class="logo" />
+        </a>
       </div>
 
       <!-- Navigation Links -->
       <ul class="hide_mobile">
         @for (item of navItems; track $index) {
-        <li itemprop="name" [routerLinkActive]="'active'">
-          <a itemprop="url" [routerLink]="item.url">{{ item.name }}</a>
+        <li itemprop="name">
+          <a itemprop="url" routerLink="/"  [fragment]="item.url">{{ item.name | translate}}</a>
         </li>
         }
       </ul>
@@ -24,7 +26,7 @@
     <!-- Right Side Icons and Profile Section -->
     <div class="navbar_end hide_mobile">
       <div class="contact_us">
-        <a href="#">Contact Us</a>
+        <a routerLink="/" fragment="contact" >{{'ContactUs' | translate}}</a>
       </div>
 
       <div class="icon">

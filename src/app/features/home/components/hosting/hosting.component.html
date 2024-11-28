@@ -1,6 +1,6 @@
 <div class="info_box">
   <h1>
-    {{ data.title }}
+    {{ data.title | translate }}
   </h1>
 
   <div class="btns-action">
@@ -53,3 +53,17 @@
     {{ data.des }}
   </p>
 </div>
+
+<p-dialog
+  [modal]="true"
+  [(visible)]="showContactUs"
+  [style]="{ width: '50rem' }"
+  (onHide)="showContactUs = false"
+>
+  <div class="section_header">
+    <h2>{{ "StayInContact" | translate }}</h2>
+
+    <h6>{{ "StayInContactDesc" | translate }}</h6>
+  </div>
+  <app-contact-us-form></app-contact-us-form>
+</p-dialog>

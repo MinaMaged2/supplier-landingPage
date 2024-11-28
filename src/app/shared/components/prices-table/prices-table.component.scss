@@ -64,6 +64,7 @@
         color: #475569;
         font-weight: 700;
         border-inline-start: 1px solid #e1e4ed;
+        text-align: start;
       }
       &:last-of-type {
         border-inline-end: 1px solid #e1e4ed;
@@ -74,6 +75,21 @@
         font-weight: 500;
         border-bottom: 1px solid #e1e4ed;
       }
+    }
+  }
+}
+
+
+.view_more{
+  background-color: transparent;
+  border: none;
+
+  ::ng-deep{
+    span{
+      color: #0163F0;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
     }
   }
 }
@@ -103,11 +119,15 @@
 ::ng-deep {
   .p-datatable-tfoot {
     td {
-        text-align: center;
+      text-align: center;
       background-color: transparent;
-      border: none;
-      padding-top: 32px;
-      padding-bottom: 0;
+
+      &:first-of-type {
+        border-inline-start: 1px solid #e1e4ed;
+      }
+      &:last-of-type {
+        border-inline-end: 1px solid #e1e4ed;
+      }
     }
   }
 }

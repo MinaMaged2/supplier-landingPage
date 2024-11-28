@@ -7,8 +7,8 @@
         <div class="row-container">
           <span class="price">$19</span>
           <div>
-            <span> per user </span>
-            <span> per month </span>
+            <span> {{ "PerUser" | translate }} </span>
+            <span> {{ "PerMonth" | translate }} </span>
           </div>
         </div>
       </th>
@@ -16,8 +16,8 @@
         <div class="row-container">
           <span class="price">$19</span>
           <div>
-            <span> per user </span>
-            <span> per month </span>
+            <span> {{ "PerUser" | translate }} </span>
+            <span> {{ "PerMonth" | translate }} </span>
           </div>
         </div>
       </th>
@@ -25,8 +25,8 @@
         <div class="row-container">
           <span class="price">$19</span>
           <div>
-            <span> per user </span>
-            <span> per month </span>
+            <span> {{ "PerUser" | translate }} </span>
+            <span> {{ "PerMonth" | translate }} </span>
           </div>
         </div>
       </th>
@@ -34,8 +34,8 @@
         <div class="row-container">
           <span class="price">$19</span>
           <div>
-            <span> per user </span>
-            <span> per month </span>
+            <span> {{ "PerUser" | translate }} </span>
+            <span> {{ "PerMonth" | translate }} </span>
           </div>
         </div>
       </th>
@@ -43,14 +43,14 @@
     }
     <tr class="main_header">
       @for (item of tablesRow; track $index) {
-      <th>{{ item }}</th>
+      <th>{{ item | translate }}</th>
       }
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-Plan>
     @if(Plan.marked){
     <tr>
-      <td>{{ Plan.name }}</td>
+      <td>{{ Plan.name | translate }}</td>
       <td>
         @if (Plan.basicPlan) {
         <svg
@@ -134,7 +134,7 @@
     </tr>
     }@else {
     <tr>
-      <td>{{ Plan.name }}</td>
+      <td>{{ Plan.name | translate }}</td>
       <td>{{ Plan.basicPlan }}</td>
       <td>{{ Plan.proPlan }}</td>
       <td>{{ Plan.premiumPlan }}</td>
@@ -147,13 +147,54 @@
   <ng-template pTemplate="footer">
     <tr>
       <td colspan="1">
-        <button label="Free Trial" pButton pRipple class="table_btn">
+      </td>
+      <td colspan="1">
+        <button
+          [label]="'viewMore' | translate"
+          pButton
+          pRipple
+          class="view_more"
+          (click)="isShowMoreClicked.emit()"
+        ></button>
+      </td>
+      <td colspan="1">
+        <button
+          [label]="'viewMore' | translate"
+          pButton
+          pRipple
+          class="view_more"
+          (click)="isShowMoreClicked.emit()"
+        ></button>
+      </td>
+      <td colspan="1">
+        <button
+          [label]="'viewMore' | translate"
+          pButton
+          pRipple
+          class="view_more"
+          (click)="isShowMoreClicked.emit()"
+        ></button>
+      </td>
+      <td colspan="1">
+        <button
+          [label]="'viewMore' | translate"
+          pButton
+          pRipple
+          class="view_more"
+          (click)="isShowMoreClicked.emit()"
+        ></button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1">
+        <button [label]="'FreeTrial' | translate" pButton pRipple (click)="getFreeTrail()" class="table_btn">
           <svg
             width="21"
             height="20"
             viewBox="0 0 21 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            class="change_dir"
           >
             <path
               d="M12.65 4.94165L17.7084 9.99998L12.65 15.0583"
@@ -175,13 +216,14 @@
         </button>
       </td>
       <td colspan="1">
-        <button label="Upgrade to Pro" pButton pRipple class="table_btn">
+        <button [label]="'UpgradeToBasic' | translate" (click)="getPlans()" pButton pRipple class="table_btn">
           <svg
             width="21"
             height="20"
             viewBox="0 0 21 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            class="change_dir"
           >
             <path
               d="M12.65 4.94165L17.7084 9.99998L12.65 15.0583"
@@ -203,13 +245,14 @@
         </button>
       </td>
       <td colspan="1">
-        <button label="Upgrade to Pro" pButton pRipple class="table_btn">
+        <button [label]="'UpgradeToPro' | translate" (click)="getPlans()" pButton pRipple class="table_btn">
           <svg
             width="21"
             height="20"
             viewBox="0 0 21 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            class="change_dir"
           >
             <path
               d="M12.65 4.94165L17.7084 9.99998L12.65 15.0583"
@@ -231,13 +274,14 @@
         </button>
       </td>
       <td colspan="1">
-        <button label="Upgrade to Pro" pButton pRipple class="table_btn">
+        <button [label]="'UpgradeToPremium' | translate" (click)="getPlans()" pButton pRipple class="table_btn">
           <svg
             width="21"
             height="20"
             viewBox="0 0 21 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            class="change_dir"
           >
             <path
               d="M12.65 4.94165L17.7084 9.99998L12.65 15.0583"
@@ -259,13 +303,14 @@
         </button>
       </td>
       <td colspan="1">
-        <button label="Upgrade to Pro" pButton pRipple class="table_btn">
+        <button [label]="'CustomizePlan' | translate" (click)="getPlans()" pButton pRipple class="table_btn">
           <svg
             width="21"
             height="20"
             viewBox="0 0 21 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            class="change_dir"
           >
             <path
               d="M12.65 4.94165L17.7084 9.99998L12.65 15.0583"

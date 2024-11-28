@@ -2,19 +2,17 @@
   <div class="container">
     <div class="features">
       <div class="feature_label">
-        <span> Features </span>
+        <span> {{'Features' | translate}} </span>
       </div>
 
       <div class="section_header">
-        <h2>Explore our amazing features</h2>
+        <h2>{{'ExploreFeatures' | translate}}</h2>
 
         <p>
-          We are self-service data analytics software that lets you create
-          visually appealing data visualisations and insightful dashboards in
-          minutes.
+          {{'ExploreFeaturesDesc' | translate}}
         </p>
 
-        <button label="Get started" pButton pRipple class="fill_btn"></button>
+        <button [label]="'GetStarted' | translate" (click)="getPlans()" pButton pRipple class="fill_btn"></button>
       </div>
 
       <div class="services">

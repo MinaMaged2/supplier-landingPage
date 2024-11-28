@@ -7,3 +7,6 @@ export const homeRoutes: Routes = [
     component: HomeComponent,
   },
 ];
+
+
+

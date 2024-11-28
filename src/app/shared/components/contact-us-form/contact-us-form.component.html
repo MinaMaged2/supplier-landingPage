@@ -2,7 +2,7 @@
   <div class="form_input">
     <p-floatLabel>
         <input type="text" pInputText formControlName="name" id="name" />
-        <label for="mobile">Name</label>
+        <label for="mobile">{{'Name' | translate}}</label>
     </p-floatLabel>
     <app-validation-error
       [formGroupInput]="contactForm"
@@ -13,7 +13,7 @@
   <div class="form_input">
     <p-floatLabel>
         <input type="text" pInputText formControlName="mobile" id="mobile" />
-        <label for="mobile">Mobil</label>
+        <label for="mobile">{{'Phone' | translate}}</label>
     </p-floatLabel>
     <app-validation-error
       [formGroupInput]="contactForm"
@@ -24,7 +24,7 @@
   <div class="form_input">
     <p-floatLabel>
         <input type="text" pInputText formControlName="email" id="email" />
-        <label for="email">Email</label>
+        <label for="email">{{'Email' | translate}}</label>
     </p-floatLabel>
     <app-validation-error
       [formGroupInput]="contactForm"
@@ -35,7 +35,7 @@
   <div class="form_input">
     <p-floatLabel>
         <input type="text" pInputText formControlName="message" id="message" />
-        <label for="message">Message</label>
+        <label for="message">{{'Message' | translate}}</label>
     </p-floatLabel>
     <app-validation-error
       [formGroupInput]="contactForm"
@@ -44,6 +44,6 @@
   </div>
 
   <div class="actions">
-    <button pButton pRipple label="Submit" class="fill_btn"></button>
+    <button pButton pRipple [label]="'Submit' | translate" class="fill_btn"></button>
   </div>
 </form>

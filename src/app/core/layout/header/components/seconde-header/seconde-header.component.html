@@ -27,7 +27,7 @@
               fill="#E9E7EB"
             />
           </svg>
-          <a href="mailto:test@gmail.com"> unreal&#64;outlook.com </a>
+          <a [href]="'mailto:' + infoMail"> {{infoMail}} </a>
         </address>
         <p>
           <a
@@ -48,7 +48,7 @@
               />
             </svg>
 
-            <span>+605-646-9241</span>
+            <span>+966-55-822-6035</span>
           </a>
         </p>
       </div>
@@ -218,7 +218,7 @@
           </p>
 
           <p class="end">
-            <span> until 6:00 PM </span>
+            <span> {{'Until' | translate}} 6:00 PM </span>
           </p>
         </div>
       </div>

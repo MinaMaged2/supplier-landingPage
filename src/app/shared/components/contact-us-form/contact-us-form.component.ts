@@ -9,6 +9,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ValidationErrorComponent } from '../validation-error/validation-error.component';
 import { ButtonModule } from 'primeng/button';
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-us-form',
@@ -18,7 +19,8 @@ import { FloatLabelModule } from 'primeng/floatlabel';
     InputTextModule,
     ValidationErrorComponent,
     ButtonModule,
-    FloatLabelModule
+    FloatLabelModule,
+    TranslateModule
   ],
   templateUrl: './contact-us-form.component.html',
   styleUrl: './contact-us-form.component.scss',

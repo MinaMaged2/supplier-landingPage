@@ -2,15 +2,15 @@
   <div class="container">
     <div class="contact">
       <div class="section_header">
-        <h2>STAY IN CAONTACT</h2>
+        <h2>{{'StayInContact' | translate}}</h2>
 
-        <h6>Get in Touch</h6>
+        <h6>{{'StayInContactDesc' | translate}}</h6>
       </div>
 
       <div class="contact_data">
         <div class="info">
           <div class="social_media">
-            <a href="#">
+            <a [href]="TwitterLink">
               <svg
                 width="25"
                 height="25"
@@ -30,7 +30,7 @@
               </svg>
             </a>
 
-            <a href="#">
+            <a [href]="facebook">
               <svg
                 width="25"
                 height="25"
@@ -50,7 +50,7 @@
               </svg>
             </a>
 
-            <a href="#">
+            <!-- <a href="#">
               <svg
                 width="25"
                 height="25"
@@ -88,32 +88,32 @@
                   />
                 </g>
               </svg>
-            </a>
+            </a> -->
           </div>
 
           <div class="desc">
             <p>
                 <span>
-                    Phone:
+                    {{'Phone' | translate}}:
                 </span>
 
-                +91 023 025 1256
+                +966-55-822-6035
             </p>
 
             <p>
                 <span>
-                    Email:
+                    {{'Email' | translate}}:
                 </span>
 
-                example&#64;gmail.com
+                {{infoMail}}
             </p>
 
             <p>
                 <span>
-                    Address:
+                    {{'Address' | translate}}:
                 </span>
 
-                Unit 8012- 8014,  Chandaka Industrial Estate, K I, I T University, Patia, Bhubaneswar, Odisha 751024
+                Riyadh - Olaya - Al Babtain Residential and Commercial Complex - Office 305, third floor
             </p>
           </div>
         </div>

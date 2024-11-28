@@ -2,7 +2,7 @@
 <div class="input_error">
   @if (formControl?.errors?.['required']) {
   <small>
-    {{ "FIELD_REQUIRED" }}
+    {{ "FIELD_REQUIRED" | translate }}
   </small>
   } @if (formControl?.errors?.['minlength']) {
   <small>

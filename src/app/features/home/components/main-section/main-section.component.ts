@@ -1,67 +1,41 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { TabViewModule } from 'primeng/tabview';
 import { HostingComponent } from '../hosting/hosting.component';
+import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main-section',
   standalone: true,
-  imports: [TabViewModule, HostingComponent],
+  imports: [TabViewModule, HostingComponent, TranslateModule],
   templateUrl: './main-section.component.html',
   styleUrl: './main-section.component.scss',
+  providers: [TranslatePipe],
+  encapsulation: ViewEncapsulation.None
 })
 export class MainSectionComponent {
+
+  // siteInfo: any = {
+  //   header: 'Hosting',
+  //   title: 'Premium Web Hosting for Your Website',
+  //   fillBtnTitle: 'Choose your plan',
+  //   fillBtnAction: 'getPlans',
+  //   emptyBtnTitle: 'Contact us ',
+  //   emptyBtnAction: 'getContact',
+  //   des: 'Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.',
+  //   img: 'assets/imgs/Image-(Replace).jpg',
+  // };
+
   siteInfo: any = {
-    header: 'Hosting',
-    title: 'Premium Web Hosting for Your Website',
-    fillBtnTitle: 'Choose your plan',
+    title: this.translate.transform('TalgahaSystem'),
+    fillBtnTitle: this.translate.transform('ChoosePlane'),
     fillBtnAction: 'getPlans',
-    emptyBtnTitle: 'Contact us ',
+    emptyBtnTitle: this.translate.transform('ContactUsBtn'),
     emptyBtnAction: 'getContact',
-    des: 'Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.',
-    img: 'assets/imgs/Image-(Replace).jpg',
+    des: this.translate.transform('TalgahaInfo'),
+    img: 'assets/imgs/image1.png',
   };
 
-  // siteInfo: any[] = [
-  //   {
-  //     header: 'Hosting',
-  //     title: 'Premium Web Hosting for Your Website',
-  //     fillBtnTitle: 'Choose your plan',
-  //     fillBtnAction: 'getPlans',
-  //     emptyBtnTitle: 'Contact us ',
-  //     emptyBtnAction: 'getContact',
-  //     des: 'Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.',
-  //     img: 'assets/imgs/Image-(Replace).jpg'
-  //   },
-  //   {
-  //     header: 'Domain',
-  //     title: 'Premium Web Domain for Your Website',
-  //     fillBtnTitle: 'Choose your plan',
-  //     fillBtnAction: 'getPlans',
-  //     emptyBtnTitle: 'Contact us ',
-  //     emptyBtnAction: 'getContact',
-  //     des: 'Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.',
-  //     img: 'assets/imgs/Image-(Replace).jpg'
-  //   },
-  //   {
-  //     header: 'SEO',
-  //     title: 'Premium Web SEO for Your Website',
-  //     fillBtnTitle: 'Choose your plan',
-  //     fillBtnAction: 'getPlans',
-  //     emptyBtnTitle: 'Contact us ',
-  //     emptyBtnAction: 'getContact',
-  //     des: 'Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.',
-  //     img: 'assets/imgs/Image-(Replace).jpg'
-  //   },
-  //   {
-  //     header: 'Email',
-  //     title: 'Premium Web Email for Your Website',
-  //     fillBtnTitle: 'Choose your plan',
-  //     fillBtnAction: 'getPlans',
-  //     emptyBtnTitle: 'Contact us ',
-  //     emptyBtnAction: 'getContact',
-  //     des: 'Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.',
-  //     img: 'assets/imgs/Image-(Replace).jpg'
-  //   }
-  // ];
-  activeIndex: number = 0;
+  constructor(
+    private translate: TranslatePipe
+  ){}
 }
