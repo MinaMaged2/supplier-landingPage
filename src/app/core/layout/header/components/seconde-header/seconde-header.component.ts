@@ -10,5 +10,11 @@ import { environment } from '../../../../../../environments/environment.developm
   encapsulation: ViewEncapsulation.None
 })
 export class SecondeHeaderComponent {
-  infoMail: string = environment.email
+  infoMail: string = environment.email;
+  supplierSa: string = environment.TalgahaSa;
+  facebook: string = environment.FaceBookLink;
+  InstaLink: string = environment.InstaLink;
+  tiktokLink: string = environment.tiktokLink;
+  TwitterLink: string = environment.TwitterLink;
+  YouTube: string = environment.YouTube;
 }
