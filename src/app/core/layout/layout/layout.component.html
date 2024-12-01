@@ -1,14 +1,40 @@
 <div class="layout">
-    <div class="main_header">
-      <app-header></app-header>
-    </div>
-  
-    <main class="main">
-      <router-outlet></router-outlet>
-    </main>
-  
-    <div class="main_footer">
-      <app-footer></app-footer>
-    </div>
+  <div class="main_header">
+    <app-header></app-header>
   </div>
-  
+
+  <main class="main">
+    <router-outlet></router-outlet>
+  </main>
+
+  <div class="main_footer">
+    <app-footer></app-footer>
+  </div>
+
+  <div class="scroll_top" #scrollUp (click)="goTop()">
+    <svg
+      width="25"
+      height="26"
+      viewBox="0 0 25 26"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18.1533 10.0795L12.0833 3.68652L6.01331 10.0795"
+        stroke="#EFF6FF"
+        stroke-width="1.5"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M12.0833 21.591V3.86548"
+        stroke="#EFF6FF"
+        stroke-width="1.5"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+</div>

@@ -7,6 +7,6 @@ export const environment = {
   YouTube: 'https://www.youtube.com/@talgaha',
   email: 'info@talgaha.com',
   TalgahaCom: 'https://supplier.talgaha.com/',
-  SupplierComSa: 'https://supplier.talgaha.sa/'
-
+  SupplierComSa: 'https://supplier.talgaha.sa/',
+  API_MASTER: "https://masterBack.talgaha.sa/api",
 };

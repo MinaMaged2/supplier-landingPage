@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { InfoBoxComponent } from '../info-box/info-box.component';
 import { title } from 'process';
-import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-solutions',
@@ -9,23 +9,22 @@ import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
   imports: [InfoBoxComponent, TranslateModule],
   templateUrl: './solutions.component.html',
   styleUrl: './solutions.component.scss',
-  providers: [TranslatePipe]
 })
 export class SolutionsComponent {
   boxInfoDataOne: any = {
-    header: this.translate.transform('TalgahaCasher'),
-    desc: this.translate.transform('CasherDesc')
+    header: this.translate.instant('TalgahaCasher'),
+    desc: this.translate.instant('CasherDesc')
   }
   boxInfoDataTwo: any = {
-    header: this.translate.transform('TalgahaWebSite'),
-    desc: this.translate.transform('TalgahaWebSiteDesc')
+    header: this.translate.instant('TalgahaWebSite'),
+    desc: this.translate.instant('TalgahaWebSiteDesc')
   }
   boxInfoDataThree: any = {
-    header: this.translate.transform('jumlaConnect'),
-    desc: this.translate.transform('jumlaConnectDesc')
+    header: this.translate.instant('jumlaConnect'),
+    desc: this.translate.instant('jumlaConnectDesc')
   };
 
   constructor(
-    private translate: TranslatePipe
+    private translate: TranslateService
   ){}
 }

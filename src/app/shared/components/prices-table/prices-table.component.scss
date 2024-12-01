@@ -1,4 +1,5 @@
 @import "../../../../../src//assets/styles/base/variables";
+@import "../../../../../src//assets/styles/abstracts/mixins";
 
 .prices {
   th {
@@ -13,6 +14,10 @@
         font-weight: 900;
         font-size: 36px;
         line-height: 47px;
+
+        @media (max-width: 767.98px) {
+          font-size: 18px;
+        }
       }
 
       div {
@@ -25,6 +30,9 @@
           font-size: 12px;
           line-height: 16px;
           font-weight: 700;
+          @media (max-width: 767.98px) {
+            font-size: 10px;
+          }
         }
       }
     }
@@ -40,12 +48,18 @@
     line-height: 24px;
     font-weight: 700;
     border-block: 1px solid #e1e4ed;
+    @media (max-width: 767.98px) {
+      padding: 22px 8px;
+      font-size: 14px;
+    }
     &:first-of-type {
       border-radius: 8px 0 0 0;
       border-inline-start: 1px solid #e1e4ed;
+      @include rtl('border-radius', 8px 0 0 0, 0 8px 0 0);
     }
     &:last-of-type {
       border-radius: 0 8px 0 0;
+      @include rtl('border-radius', 0 8px 0 0, 8px 0 0 0);
       border-inline-end: 1px solid #e1e4ed;
     }
     &:not(:first-of-type) {
@@ -60,6 +74,12 @@
       font-size: 16px;
       line-height: 24px;
       padding: 22px 14px;
+
+      @media (max-width: 767.98px) {
+        padding: 22px 8px;
+        font-size: 14px;
+      }
+
       &:first-of-type {
         color: #475569;
         font-weight: 700;

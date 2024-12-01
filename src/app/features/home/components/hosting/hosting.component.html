@@ -5,14 +5,14 @@
 
   <div class="btns-action">
     <button
-      [label]="data.fillBtnTitle"
+      [label]="data.fillBtnTitle | translate"
       pButton
       pRipple
       class="fill_btn"
       (click)="getPlans(data.fillBtnAction)"
     ></button>
     <button
-      [label]="data.emptyBtnTitle"
+      [label]="data.emptyBtnTitle | translate"
       pButton
       pRipple
       class="empty_btn"

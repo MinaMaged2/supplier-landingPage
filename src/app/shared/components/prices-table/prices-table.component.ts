@@ -12,7 +12,7 @@ import { isPlatformBrowser } from '@angular/common';
   standalone: true,
   imports: [TableModule, ButtonModule, TranslateModule],
   templateUrl: './prices-table.component.html',
-  styleUrl: './prices-table.component.scss'
+  styleUrl: './prices-table.component.scss',
 })
 export class PricesTableComponent {
   @Input() tablesRow!: string[];

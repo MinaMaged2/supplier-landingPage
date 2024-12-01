@@ -29,15 +29,12 @@
     <!-- Enter valid field -->
     {{ "ENTER_VALID_DATA" }}
   </small>
-  } @if (formControl?.get('email')?.touched &&
-  formControl?.get('email')?.errors) {
+  } @if ( formControl?.errors?.['email']) {
   <small>
-    @if (formControl?.get('email')?.getError('pattern')) {
     <ng-container>
       <!-- This field require a valid email -->
-      {{ "FIELD_EMAIL_REQUIRED" }}
+      {{ "FIELD_EMAIL_REQUIRED" | translate }}
     </ng-container>
-    }
   </small>
   } @if (formControl?.errors?.['phoneNumber']) {
   <small>

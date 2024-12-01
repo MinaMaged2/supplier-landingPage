@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { PricesTableComponent } from '../../../../shared/components/prices-table/prices-table.component';
 import { ButtonModule } from 'primeng/button';
-import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-pricing-plans',
@@ -9,7 +9,6 @@ import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
   imports: [PricesTableComponent, ButtonModule, TranslateModule],
   templateUrl: './pricing-plans.component.html',
   styleUrl: './pricing-plans.component.scss',
-  providers: [TranslatePipe]
 })
 export class PricingPlansComponent {
   mainRowHeader:   string[] = [
@@ -27,7 +26,7 @@ export class PricingPlansComponent {
       basicPlan: '1',
       proPlan: '3',
       premiumPlan: '5',
-      customizePlan: this.translate.transform('Unlimited')
+      customizePlan: this.translate.instant('Unlimited')
     },
     {
       marked: false,
@@ -35,7 +34,7 @@ export class PricingPlansComponent {
       basicPlan: '2',
       proPlan: '4',
       premiumPlan: '6',
-      customizePlan: this.translate.transform('Unlimited')
+      customizePlan: this.translate.instant('Unlimited')
     },
     {
       marked: false,
@@ -43,7 +42,7 @@ export class PricingPlansComponent {
       basicPlan: '1000',
       proPlan: '2000',
       premiumPlan: '3000',
-      customizePlan: this.translate.transform('Unlimited')
+      customizePlan: this.translate.instant('Unlimited')
     },
     {
       marked: true,
@@ -94,7 +93,7 @@ export class PricingPlansComponent {
       basicPlan: '1000',
       proPlan: '2000',
       premiumPlan: '3000',
-      customizePlan: this.translate.transform('Unlimited')
+      customizePlan: this.translate.instant('Unlimited')
     },
     {
       marked: false,
@@ -102,7 +101,7 @@ export class PricingPlansComponent {
       basicPlan: '2',
       proPlan: '4',
       premiumPlan: '6',
-      customizePlan: this.translate.transform('Unlimited')
+      customizePlan: this.translate.instant('Unlimited')
     },
     {
       marked: false,
@@ -110,7 +109,7 @@ export class PricingPlansComponent {
       basicPlan: '1',
       proPlan: '3',
       premiumPlan: '5',
-      customizePlan: this.translate.transform('Unlimited')
+      customizePlan: this.translate.instant('Unlimited')
     },
     {
       marked: true,
@@ -172,7 +171,7 @@ export class PricingPlansComponent {
   isShowDetails: boolean = false;
 
   constructor(
-    private translate: TranslatePipe
+    private translate: TranslateService
   ){}
 
 }

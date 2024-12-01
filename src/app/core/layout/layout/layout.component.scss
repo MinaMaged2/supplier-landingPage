@@ -1,0 +1,26 @@
+@import "../../../../assets/styles/base/variables";
+
+.layout{
+    position: relative;
+}
+
+
+.scroll_top{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: $primary-color;
+    border-radius: 25px;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+
+    @media (max-width: 767.98px) {
+        padding: 8px;
+        right: 35px;
+        svg{
+            width: 20px;
+            height: 20px;
+        }
+      }
+}

@@ -1,49 +1,68 @@
+<p-toast></p-toast>
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <div class="form_input">
     <p-floatLabel>
-        <input type="text" pInputText formControlName="name" id="name" />
-        <label for="mobile">{{'Name' | translate}}</label>
+      <input type="text" pInputText formControlName="ClientName" id="ClientName" />
+      <label for="ClientName">{{ "Name" | translate }}</label>
     </p-floatLabel>
     <app-validation-error
       [formGroupInput]="contactForm"
-      formControlNameInput="name"
+      formControlNameInput="ClientName"
     ></app-validation-error>
   </div>
 
   <div class="form_input">
     <p-floatLabel>
-        <input type="text" pInputText formControlName="mobile" id="mobile" />
-        <label for="mobile">{{'Phone' | translate}}</label>
+      <!-- <input
+        type="text"
+        pInputText
+        formControlName="mobile"
+        type="number"
+        id="mobile"
+      /> -->
+      <p-inputNumber
+        mode="decimal"
+        inputId="withoutgrouping"
+        formControlName="ClientMobile"
+        id="ClientMobile"
+        [useGrouping]="false"
+      />
+      <label for="ClientMobile">{{ "Phone" | translate }}</label>
     </p-floatLabel>
     <app-validation-error
       [formGroupInput]="contactForm"
-      formControlNameInput="mobile"
+      formControlNameInput="ClientMobile"
     ></app-validation-error>
   </div>
 
   <div class="form_input">
     <p-floatLabel>
-        <input type="text" pInputText formControlName="email" id="email" />
-        <label for="email">{{'Email' | translate}}</label>
+      <input type="email" pInputText formControlName="ClientEmail" id="ClientEmail" />
+      <label for="ClientEmail">{{ "Email" | translate }}</label>
     </p-floatLabel>
     <app-validation-error
       [formGroupInput]="contactForm"
-      formControlNameInput="email"
+      formControlNameInput="ClientEmail"
     ></app-validation-error>
   </div>
 
   <div class="form_input">
     <p-floatLabel>
-        <input type="text" pInputText formControlName="message" id="message" />
-        <label for="message">{{'Message' | translate}}</label>
+      <input type="text" pInputText formControlName="ClientMsg" id="ClientMsg" />
+      <label for="ClientMsg">{{ "Message" | translate }}</label>
     </p-floatLabel>
     <app-validation-error
       [formGroupInput]="contactForm"
-      formControlNameInput="message"
+      formControlNameInput="ClientMsg"
     ></app-validation-error>
   </div>
 
   <div class="actions">
-    <button pButton pRipple [label]="'Submit' | translate" class="fill_btn"></button>
+    <button
+      pButton
+      pRipple
+      [label]="'Submit' | translate"
+      class="fill_btn"
+    ></button>
   </div>
 </form>

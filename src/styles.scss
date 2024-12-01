@@ -32,10 +32,18 @@ body {
     color: $primary-color;
   }
 
-  .ng-invalid.ng-touched {
+  input.ng-invalid.ng-touched {
     border-color: red !important;
     color: red;
   }
+
+  p-inputnumber.ng-invalid.ng-touched{
+    input{
+      border-color: red !important;
+      color: red;
+    }
+  }
+ 
 
   .show_mobile {
     display: none !important;

@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { TabViewModule } from 'primeng/tabview';
 import { HostingComponent } from '../hosting/hosting.component';
-import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main-section',
@@ -9,7 +9,6 @@ import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
   imports: [TabViewModule, HostingComponent, TranslateModule],
   templateUrl: './main-section.component.html',
   styleUrl: './main-section.component.scss',
-  providers: [TranslatePipe],
   encapsulation: ViewEncapsulation.None
 })
 export class MainSectionComponent {
@@ -26,16 +25,16 @@ export class MainSectionComponent {
   // };
 
   siteInfo: any = {
-    title: this.translate.transform('TalgahaSystem'),
-    fillBtnTitle: this.translate.transform('ChoosePlane'),
+    title: this.translate.instant('TalgahaSystem'),
+    fillBtnTitle: 'ChoosePlane',
     fillBtnAction: 'getPlans',
-    emptyBtnTitle: this.translate.transform('ContactUsBtn'),
+    emptyBtnTitle: 'ContactUsBtn',
     emptyBtnAction: 'getContact',
-    des: this.translate.transform('TalgahaInfo'),
+    des: this.translate.instant('TalgahaInfo'),
     img: 'assets/imgs/image1.png',
   };
 
   constructor(
-    private translate: TranslatePipe
+    private translate: TranslateService
   ){}
 }
