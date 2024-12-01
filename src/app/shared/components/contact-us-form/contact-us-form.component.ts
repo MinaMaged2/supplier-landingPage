@@ -40,8 +40,8 @@ export class ContactUsFormComponent {
     ClientEmail: new FormControl('', [Validators.required, Validators.email]),
     ClientMsg: new FormControl('', Validators.required),
     ClientSubject: new FormControl('From Supplier Subscription'),
-
   });
+  
   visitorMsgService =  inject(VisitorMessagesService);
   responseHandler = inject(ResponseErrorHandlerService);
   messageService = inject(MessageService);
