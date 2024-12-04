@@ -2,7 +2,7 @@
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <div class="form_input">
     <p-floatLabel>
-      <input type="text" pInputText formControlName="ClientName" id="ClientName" />
+      <input type="text" pInputText formControlName="ClientName" id="ClientName" ariaLabel="name" />
       <label for="ClientName">{{ "Name" | translate }}</label>
     </p-floatLabel>
     <app-validation-error
@@ -13,20 +13,20 @@
 
   <div class="form_input">
     <p-floatLabel>
-      <!-- <input
-        type="text"
+      <input
         pInputText
-        formControlName="mobile"
+        formControlName="ClientMobile"
         type="number"
-        id="mobile"
-      /> -->
-      <p-inputNumber
+        id="ClientMobile"
+      />
+      <!-- <p-inputNumber
         mode="decimal"
         inputId="withoutgrouping"
         formControlName="ClientMobile"
         id="ClientMobile"
         [useGrouping]="false"
-      />
+        ariaLabel="phone number"
+      /> -->
       <label for="ClientMobile">{{ "Phone" | translate }}</label>
     </p-floatLabel>
     <app-validation-error
@@ -37,7 +37,7 @@
 
   <div class="form_input">
     <p-floatLabel>
-      <input type="email" pInputText formControlName="ClientEmail" id="ClientEmail" />
+      <input type="email" pInputText formControlName="ClientEmail" id="ClientEmail" ariaLabel="email" />
       <label for="ClientEmail">{{ "Email" | translate }}</label>
     </p-floatLabel>
     <app-validation-error
@@ -48,7 +48,7 @@
 
   <div class="form_input">
     <p-floatLabel>
-      <input type="text" pInputText formControlName="ClientMsg" id="ClientMsg" />
+      <input type="text" pInputText formControlName="ClientMsg" id="ClientMsg" ariaLabel="message" />
       <label for="ClientMsg">{{ "Message" | translate }}</label>
     </p-floatLabel>
     <app-validation-error

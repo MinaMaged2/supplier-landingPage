@@ -4,16 +4,19 @@
       <div class="info">
         <div class="company_logo">
           <a href="#">
-            <img src="assets/imgs/logo-transparent.png" alt="company logo" />
+            <picture>
+              <source media="(min-width:150px)" srcset="assets/imgs/logo-transparent.png">
+              <img src="assets/imgs/logo-transparent.png" alt="company logo" />
+            </picture>
           </a>
         </div>
-        <h5>{{'whoWeAre' | translate}}</h5>
+        <h3>{{'whoWeAre' | translate}}</h3>
         <p>
           {{'FooterDesc' | translate}}
         </p>
 
         <div class="social_links">
-          <a [href]="facebook">
+          <a [href]="facebook" aria-label="facebook icon">
             <svg
               width="25"
               height="25"
@@ -28,7 +31,7 @@
             </svg>
           </a>
 
-          <a [href]="TwitterLink">
+          <a [href]="TwitterLink" aria-label="twitter icon">
             <svg
               width="25"
               height="25"
@@ -70,7 +73,7 @@
             </svg>
           </a> -->
 
-          <a [href]="YouTube">
+          <a [href]="YouTube" aria-label="youtube icon">
             <svg
               width="25"
               height="26"
@@ -157,7 +160,7 @@
 
       <div class="links">
         <div>
-          <h6>{{'QuickLink' | translate}}</h6>
+          <h4>{{'QuickLink' | translate}}</h4>
           <ul>
             @for (item of quickLinks; track $index) {
             <li>
@@ -170,7 +173,7 @@
         </div>
 
         <div>
-          <h6>{{'Services' | translate}}</h6>
+          <h4>{{'Services' | translate}}</h4>
 
           <ul>
             @for (item of servicesLinks; track $index) {
@@ -184,7 +187,7 @@
         </div>
 
         <div>
-          <h6>{{'ContactInfo' | translate}}</h6>
+          <h4>{{'ContactInfo' | translate}}</h4>
 
           <ul>
             <li>{{infoMail}}</li>

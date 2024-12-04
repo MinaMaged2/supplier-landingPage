@@ -55,9 +55,9 @@
     }
 
     img {
-      max-width: 720px;
+      width: 720px;
       position: absolute;
-      max-height: 500px;
+      height: 418px;
       border-radius: 16px 0 0 16px;
       @include rtl(right, 0px, auto);
       @include rtl(left, auto , 0px);

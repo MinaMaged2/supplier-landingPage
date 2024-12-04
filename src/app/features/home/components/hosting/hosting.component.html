@@ -1,7 +1,9 @@
-<div class="info_box">
-  <h1>
-    {{ data.title | translate }}
-  </h1>
+<section class="info_box">
+  <header>
+    <h1>
+      {{ data.title | translate }}
+    </h1>
+  </header>
 
   <div class="btns-action">
     <button
@@ -10,6 +12,7 @@
       pRipple
       class="fill_btn"
       (click)="getPlans(data.fillBtnAction)"
+      aria-label="choose plane"
     ></button>
     <button
       [label]="data.emptyBtnTitle | translate"
@@ -17,6 +20,7 @@
       pRipple
       class="empty_btn"
       (click)="getContact(data.emptyBtnAction)"
+      aria-label="contact us"
     >
       <svg
         width="21"
@@ -52,7 +56,7 @@
   <p>
     {{ data.des }}
   </p>
-</div>
+</section>
 
 <p-dialog
   [modal]="true"

@@ -31,7 +31,7 @@ export class MainSectionComponent {
     emptyBtnTitle: 'ContactUsBtn',
     emptyBtnAction: 'getContact',
     des: this.translate.instant('TalgahaInfo'),
-    img: 'assets/imgs/image1.png',
+    img: 'assets/imgs/image1.webp',
   };
 
   constructor(

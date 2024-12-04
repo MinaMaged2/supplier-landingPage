@@ -1,4 +1,4 @@
-<div class="showcase_container">
+<section class="showcase_container" aria-labelledby="showcase-heading">
   <div class="container">
     <div class="showcase">
       <h2>{{'NumbersOfShowcase' | translate }}</h2>
@@ -7,9 +7,9 @@
         @for (item of numbers; track $index) {
         <div class="number-box">
           <div>
-            <h6>
+            <h3>
               {{ item.number }}
-            </h6>
+            </h3>
             <span>
               {{ item.title | translate}}
             </span>
@@ -19,4 +19,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>
